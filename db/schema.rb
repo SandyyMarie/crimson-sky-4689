@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2022_09_20_062205) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
+    t.integer "calorie_count"
     t.bigint "dish_id"
     t.index ["dish_id"], name: "index_ingredients_on_dish_id"
   end

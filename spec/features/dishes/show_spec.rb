@@ -6,9 +6,9 @@ RSpec.describe "As a visitor, when I visit a dishes show page" do
 
     @dish_1 = Dish.create!(name: "Cheese Pizza", description: "A classic plain cheese pizza, add toppings and bake until ready", chef_id:@chef_1.id)
 
-    @ingredient_1 = @dish_1.ingredients.create!(name: "Pizza Dough")
-    @ingredient_2 = @dish_1.ingredients.create!(name: "Red Sauce")
-    @ingredient_3 = @dish_1.ingredients.create!(name: "Cheese")
+    @ingredient_1 = @dish_1.ingredients.create!(name: "Pizza Dough", calorie_count: 300)
+    @ingredient_2 = @dish_1.ingredients.create!(name: "Red Sauce", calorie_count: 200)
+    @ingredient_3 = @dish_1.ingredients.create!(name: "Cheese", calorie_count: 400)
   end
 
   it "it shows the dish's name and description" do
