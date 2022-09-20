@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :dishes, only: [:show] do
     resources :ingredients
   end
+
+  resources :ingredients
 end
