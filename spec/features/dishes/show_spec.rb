@@ -20,6 +20,9 @@ RSpec.describe "As a visitor When I visit a dishes show page" do
   it "shows a list of ingredients for the dish and the chefs name" do
     visit dish_path(@dish_1) #check routes
     expect(page).to have_content(@dish_1.chef.name)
-    expect(page).to have_content([@ingredient_1, @ingredient_2, @ingredient_3])
+    expect(page).to have_content(@ingredient_1.name)
+    expect(page).to have_content(@ingredient_2.name)
+    expect(page).to have_content(@ingredient_3.name)
+
   end
 end
